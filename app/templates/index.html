@@ -83,14 +83,7 @@
                             </a>
 
                             <!-- One click single item playlist Download -->
-                            <button title="{{item.filename}}.m3u" onclick="singleItemPlaylist('{{item.download}}','{{item.quoted_filename}}', '{{m3u_option}}');"
-                                class="flex-1 hover:bg-blue-300 text-gray-900 font-semibold py-1 px-2 rounded items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
-                                </svg>
-                            </button>
+                            
                         {% endif %}
                     {% endif %}
 
@@ -119,11 +112,11 @@
 <div class="mx-auto my-2 text-center flex text-white content-center justify-center">
     {% if prev_page %}
     <a title="Previous page"
-        class="mx-2 p-2 border rounded bg-blue-500 hover:border-blue-500 hover:text-blue-500 hover:bg-white"
-        href="{{prev_page.url}}">Page {{prev_page.no}}</a>
+        class="mx-2 p-2 border rounded border-blue-500 hover:border-blue-500 hover:text-blue-500 hover:bg-white"
+        href="{{prev_page.url}}">{{prev_page.no}}</a>
     {% endif %}
     <p
-        class="mx-2 p-2 border rounded border-blue-500 text-blue-500 hover:border-blue-500 hover:text-blue-500 hover:bg-white">
+        class="mx-2 p-2 border rounded bg-blue-500 text-blue-500 hover:border-blue-500 hover:text-blue-500 hover:bg-white">
         Page {{cur_page}}</p>
     {% if next_page %}
     <a title="Next page"
@@ -135,7 +128,7 @@
 {% else %}
 
 <p class="my-4 text-center text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
-    No message to display!
+    File not found!
 </p>
 
 {% endif %}
